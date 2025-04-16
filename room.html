@@ -47,6 +47,7 @@
         const woodMaterial = new THREE.TextureLoader().load("images/Wood.jpg")
         const wallMaterial = new THREE.TextureLoader().load("images/wall.png")
         const carpetMaterial = new THREE.TextureLoader().load("images/carpet.jpg")
+        const poster1Material = new THREE.TextureLoader().load("images/poster1.jpg")
 
 
 
@@ -141,7 +142,7 @@
         scene.add(wall);
 
         //Posters on the wall
-        const poster1 = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1, 0.2), new THREE.MeshStandardMaterial({color: 0xbd1c77}));
+        const poster1 = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1, 0.2), new THREE.MeshStandardMaterial({map: poster1Material}));
         poster1.position.set(-2, 4.6, -4.9);
         scene.add(poster1);
 
