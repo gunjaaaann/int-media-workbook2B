@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/ltw8pzf.css">
+    <title>Workshop 6</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <style>
+
+        * {cursor:url("images/w6-cursor.png"), auto;}
+
+        a {cursor: pointer !important;}
+
+        body {
+            background-color: #fbce3a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            text-align: center;
+            color: #000000;
+            font-family: "fractul-variable", sans-serif;            
+            position: relative;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .back {
+            background-color: #54098d; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 2em;
+        }
+
+        .back:hover {
+            background-color: #1945f5; 
+        }
+
+        .main-header {
+            background-color: #d60101;
+            color: #ffffff;
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        .row {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .column {
+            width: 50%;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .canvas-container {
+            position: sticky;
+            top: 0;
+            z-index: 8;
+        }
+
+        .photo {
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        .sticky-heading {
+            background-color: #ffffff;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        .wardrobe {
+            width: calc(50% - 0.5em);
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+
+        .side-by-side {
+            display: flex;
+            width: 100%;
+        }
+
+
+    </style>  
+</head>
+<br>
+    <div class="button-container"> 
+        <button style="font-size: 1rem; font-family: 'Bueno'"  class="back" onclick="location.href='room.html'">BACK</button>
+    </div>
+
+    <div class="main-header">
+        <h2>WORKSHOP 6</h2>
+    </div>
+
+    <p>/* turn up your audio to immerse yourself in an audio-visual experience. how does it make you feel? */</p>
+    <div id="canvas-container">    
+        <script src="w6-sketch1.js"></script>
+    </div>
+
+
+
+    <!--stack of rows with 2 columns-->
+    <div class="sticky-heading"><h3>/* class experiments & notes */</h3></div>
+    <div class="row">
+        <div class="column">
+            <video controls class="photo"><source src="images/w6.1.mov"></video>
+        </div>
+        <div class="column">
+            <p>/* analysing audio to change text size */</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/w6.2.jpeg" class="photo">
+        </div>
+        <div class="column">
+            <p>/* data in your pocket */</p>
+            <p>/* done with Rebekah and Tashya */</p>
+            <p>/* data organised by how long we'd spend searching if the item were lost</p>
+            <p>with the laptops and the hard drive as the epicentre */</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="side-by-side">
+                <img src="images/w6.9.jpg" class="wardrobe">
+                <img src="images/w6.10.jpg" class="wardrobe">
+            </div>
+        </div>
+        <div class="column">
+            <p>/* feedback from workbook 2A</p>
+            <p>and other ideas i want to try out for workbook 2B */</p>
+        </div>
+    </div>
+
+
+    <!--data visualisation-->
+    <div class="sticky-heading"><h3>/* data visualisation */</h3></div>
+    <div class="row">
+        <div class="column">
+            <img src="images/closet_colour_analysis.jpg" class="photo">
+            <div class="side-by-side">
+                <img src="images/w6.7.jpg" class="wardrobe">
+                <img src="images/w6.8.jpg" class="wardrobe">
+            </div>
+        </div>
+        <div class="column">
+            <p>/* closet colour analysis */</p>
+            <p>/* using the colour picker tool in Adobe Illustrator</p>
+            <p>and inspired by movie barcodes</p>
+            <p>I decided to do a closet colour analysis</p>
+            <p>with the help of ChatGPT */</p>
+            <p>/* ChatGPT described me with the following words:</p>
+            <p>practical, classic, minimalist, confidence, eye for detail</p>
+            <p>cool-headed, introspective, playfulness, bold flair */</p>
+            <p>/* this exercise made me realise my closet is rather boring</p>
+            <p>and pushed me to consider showcasing my creative colourful side more */</p>
+            <p><a href="https://chatgpt.com/share/67fefc51-4ce4-8004-99cd-03f0163e7b4a">view the chat here</a></p>
+        </div>
+    </div>
+
+
+    <!--hunt n gather-->
+    <div class="sticky-heading"><h3>/* hunt n gather */</h3></div>
+    <div class="row">
+        <div class="column">
+            <img src="images/w6.3.png" class="photo">
+        </div>
+        <div class="column">
+            <p>/* slave to the algorithm</p>
+            <p>by Kathy Minhanh */</p>
+            <p>/* face mapping and emotion detection to generate art */</p>
+            <p><a href="https://kathyminhanh97.github.io/slavetothealgorithm/showcase/">view here</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/w6.4.png" class="photo">
+        </div>
+        <div class="column">
+            <p>/* slave to the algorithm</p>
+            <p>by Connor McNamara */</p>
+            <p>/* mimics music festival vibes with a circle</p>
+            <p>responding to the movement of the head */</p>
+            <p><a href="https://connor-mcnamara.github.io/Slave-to-the-algorithm/Articulation_/">view here</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/w6.5.png" class="photo">
+        </div>
+        <div class="column">
+            <p>/* pac tracer</p>
+            <p>by Andy Wallace */</p>
+            <p>/* MIT Generative Unfoldings */</p>
+            <p>/* responsive cursor */</p>
+            <p><a href="https://generative-unfoldings.mit.edu/works/pac-tracer/view.html">view here</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <video controls class="photo"><source src="images/w6.6.mov"></video>
+        </div>
+        <div class="column">
+            <p>/* Can the Subaltern Speak?</p>
+            <p>by Behnaz Farahi */</p>
+            <p>/* MIT Generative Unfoldings */</p>
+            <p>/* responsive cursor */</p>
+            <p>/* 3D space */</p>
+            <p><a href="https://generative-unfoldings.mit.edu/works/masks/view.html">view here</a></p>
+        </div>
+    </div>
+
+    <div style="padding-top: 4em;">
+        <h3>/* references */</h3>
+        <p>audio downloaded from freesound.org</p>
+        <p><a href="https://freesound.org/people/Setuniman/sounds/135670/">view here</a></p>
+    </div>
+    
+    
+
+</body>  
+</html>
