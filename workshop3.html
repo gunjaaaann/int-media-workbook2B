@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 3</title>
+    <style>
+
+        * {
+            cursor:url("images/w3-cursor.png") 16 16, auto;
+        }
+
+        a {
+            cursor: pointer !important;
+        }
+
+        body {
+            background-color: #3a3f62;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Bueno';
+            position: relative;
+        }
+
+        .back-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .back {
+            background-color: #ff86f9; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 2em;
+            margin-right: 2em;
+        }
+
+        .back:hover {
+            background-color: #900000; 
+        }
+
+        .main-header {
+            background-color: #25283d;
+            color: white;
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        .container {
+            margin: 3em;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center; 
+            margin-top: 1em;
+        }
+
+
+        .portrait {
+            margin: 1em;
+            width: 30em;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .landscape {
+            margin: 1em;
+            width: 62em;
+            max-width: 100%;
+            height: auto;
+        }  
+
+        h2 {
+            font-size: 2rem
+        }
+
+        div p {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .info {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        /* sparkles emoji */
+        div p img {
+            height: 25px 
+        }
+
+        div svg text {
+            font-family:'Courier New', Courier, monospace ;
+            font-size: 5em;
+            text-anchor: middle;
+        }
+
+        /* Rainfall */
+        .rainfall {
+        position: absolute;
+        z-index: -1;
+        }
+
+        .rain1 {
+        color: #c0c7ff;
+        text-shadow: rgb(190, 190, 232);
+        font-size: 1.4em;
+        letter-spacing: -2px;
+        text-shadow: 2px 2px 20px #c0c7ff;
+        opacity: 0.9;
+        z-index: -2;
+        }
+
+        #rain1 {
+        position: absolute;
+        top: 0px;
+        right: 10vw;
+        animation: 3.3s rainfall linear infinite;
+        z-index: -1;
+        }
+
+        #rain2 {
+        position: absolute;
+        top: 0px;
+        right: 50vw;
+        animation: 2.7s rainfall linear infinite;
+        z-index: -1;
+        }
+
+        #rain3 {
+        position: absolute;
+        top: -15vh;
+        right: 60vw;
+        animation: 4.2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain4 {
+        position: absolute;
+        top: -30vh;
+        right: 90vw;
+        animation: 4.3s rainfall linear infinite;
+        animation-delay: 2s;
+        z-index: -1;
+        }
+
+        #rain5 {
+        position: absolute;
+        top: -40vh;
+        right: 30vw;
+        animation: 3s rainfall linear infinite;
+        z-index: -1;
+        }
+
+        #rain6 {
+        position: absolute;
+        top: -3vh;
+        right: -50vw;
+        animation: 3s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain7 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 2.2s;
+        z-index: -1;
+        }
+
+        #rain8 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 2.2s;
+        z-index: -1;
+        }
+
+        #rain9 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.5s;
+        z-index: -1;
+        }
+
+        #rain10 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain11 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain12 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain13 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain14 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain15 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain16 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 0.8s;
+        z-index: -1;
+        }
+
+        #rain17 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 1.2s;
+        z-index: -1;
+        }
+
+        #rain18 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 0.8s;
+        z-index: -1;
+        }        
+        
+        #rain19 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 0.5s;
+        z-index: -1;
+        }        
+        
+        #rain20 {
+        position: absolute;
+        top: -22px;
+        right: -20vw;
+        animation: 2s rainfall linear infinite;
+        animation-delay: 0.2s;
+        z-index: -1;
+        }
+
+        @keyframes rainfall {
+        0% {
+        line-height: 5px;
+        }
+        100% {
+        line-height: 10px;
+        }
+        }
+        @keyframes rainfall {
+        0% {
+        transform: rotateZ(0deg) translateX(0%) translateY(0%);
+        }
+        100% {
+        transform: rotateZ(0deg) translateX(0vw) translateY(100vh);
+        }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="back-button-container"> 
+        <button style="font-size: 1rem; font-family: 'Bueno';"  class="back" onclick="location.href='room.html'">BACK</button>
+    </div>
+
+    <div class="main-header">
+        <h2>WORKSHOP 3</h2>
+    </div>
+
+    <div id="rainfall" class="hidden">
+        <div class="rain1" id="rain1"><pre>|</pre></div>
+        <div class="rain1" id="rain2"><pre>|</pre></div>
+        <div class="rain1" id="rain3"><pre>|</pre></div>
+        <div class="rain1" id="rain4"><pre>|</pre></div>
+        <div class="rain1" id="rain5"><pre>|</pre></div>
+        <div class="rain1" id="rain6"><pre>|</pre></div>
+        <div class="rain1" id="rain7"><pre>|</pre></div>
+        <div class="rain1" id="rain8"><pre>|</pre></div>
+        <div class="rain1" id="rain9"><pre>|</pre></div>
+        <div class="rain1" id="rain10"><pre>|</pre></div>
+        <div class="rain1" id="rain11"><pre>|</pre></div>
+        <div class="rain1" id="rain12"><pre>|</pre></div>
+        <div class="rain1" id="rain13"><pre>|</pre></div>
+        <div class="rain1" id="rain14"><pre>|</pre></div>
+        <div class="rain1" id="rain15"><pre>|</pre></div>
+        <div class="rain1" id="rain16"><pre>|</pre></div>
+        <div class="rain1" id="rain17"><pre>|</pre></div>
+        <div class="rain1" id="rain18"><pre>|</pre></div>
+        <div class="rain1" id="rain19"><pre>|</pre></div>
+        <div class="rain1" id="rain20"><pre>|</pre></div>
+    </div>
+
+    <!-- fluid design -->
+    <div class="container"> 
+      <p>fluid design</p>
+      <div class="images"> 
+        <img src="images/w3.1.jpg" class="landscape">
+      </div>
+      <p class="info">/* designing for mobile interfaces using media queries */</p>
+    </div>
+
+    <!-- development work -->
+     <div class="container">
+        <p>development work</p>
+        <div class="images">
+            <img src="images/w3.4.JPG" class="portrait">
+            <img src="images/w3.5.jpg" class="portrait">
+            <img src="images/w3.6.jpg" class="portrait">
+        </div>
+        <p class="info">/* ideas and to do list */</p>
+     </div>
+
+     <div class="container">
+        <div class="images">
+            <img src="images/w3.2.JPG" class="portrait">
+            <img src="images/w3.3.jpg" class="portrait">
+        </div>
+        <p class="info">/* file organisation */</p>
+     </div>
+
+     <div class="container">
+        <div class="images">
+            <img src="images/w3.9.jpg" class="landscape">
+            <img src="images/w3.8.jpg" class="landscape">
+        </div>  
+            <p class="info">/* more.... file organisation */</p>
+            <p class="info">/* I blindly followed a YouTube tutorial and wrote code in JS and react */</p>
+            <p class="info">/* I used chatGPT to convert this to plain JS to be able to host it on Github */</p>
+            <p class="info">/* this also significantly sorted and reduced my files */</p>
+     </div>
+
+
+    <!-- hunt n gather -->
+    <div class="container">
+        <p>hunt n gather</p>
+        <!-- inspiration 1 -->
+        <div class="images">
+            <img src="images/w3.7.jpg" class="landscape">
+        </div>
+        <p class="info">/* Nomadic Tribe */</p>
+        <p class="info">/* interactive cursor */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://2019.makemepulse.com" style="color: #ffffff;">view here</a></p>
+
+        <!-- inspiration 2 -->
+        <div class="images">
+            <video controls  class="landscape">
+                <source src="images/w3.8.mov">
+            </video>
+        </div>
+        <p class="info">/* Scale of Universe */</p>
+        <p class="info">/* interactive cursor */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://scaleofuniverse.com/en" style="color: #ffffff;">view here</a></p>
+        
+        <!-- inspiration 3 -->
+        <div class="images">
+            <img src="images/w3.10.jpg" class="landscape">
+        </div>
+        <p class="info">/* Late Checkout */</p>
+        <p class="info">/* 3D space, interaction through keyboard */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://www.latecheckout.studio" style="color: #ffffff;">view here</a></p>
+
+    </div>
+
+    <!-- sources -->
+    <div>
+        <p>sources</p>
+        <p class="info">/* raindrops code (shooting-stars code) copied from lms >> WEEK 2: Guides | Cheatsheets | Code Snippets */</p>
+        <p class="info">/* chatGPT link - for converting react to plain JS. see below */</p>
+        <p class="info"><a href="https://chatgpt.com/canvas/shared/67e3d71736908191a5ee9a9cf0cc8193" style="color: #ffffff;">view here</a></p>
+    </div>
+
+
+    </body>
+</html>

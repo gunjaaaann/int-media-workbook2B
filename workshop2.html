@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 2</title>
+    <style>
+
+        * {
+            cursor:url("images/w2-cursor.png"), auto;
+        }
+
+        a {
+            cursor: pointer !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            text-align: center;
+            color: #000000;
+            font-family: 'Bueno';
+            position: relative;
+        }
+
+        .striped-background {
+            height:100%;
+            background: repeating-linear-gradient(
+            -45deg,
+            rgb(255, 0, 0),
+            rgb(255, 166, 0),
+            rgb(255, 255, 0),
+            rgb(0, 205, 0),
+            rgb(27, 88, 255),
+            rgb(149, 0, 255),
+            rgb(255, 8, 255)
+            );
+        }
+
+        .back-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .back {
+            background-color: #ffffff; 
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 2em;
+            margin-right: 2em;
+        }
+
+        .back:hover {
+            background-color: #3c0096; 
+            color: #ffffff;
+        }
+
+        .main-header {
+            background-color: #000000;
+            color: white;
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        .container {
+            margin: 3em;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center; 
+            margin-top: 1em;
+        }
+
+
+        .portrait {
+            margin: 1em;
+            width: 30em;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .landscape {
+            margin: 1em;
+            width: 62em;
+            max-width: 100%;
+            height: auto;
+        }  
+
+        h2 {
+            font-size: 2rem
+        }
+
+        div p {
+            font-size: 2rem;
+            color: #000000;
+        }
+
+        .info {
+            font-size: 18px;
+            color: #000000;
+        }
+
+        /* sparkles emoji */
+        div p img {
+            height: 25px 
+        }
+
+        div svg text {
+            font-family:'Courier New', Courier, monospace ;
+            font-size: 5em;
+            text-anchor: middle;
+        }
+
+
+    </style>
+</head>
+
+<body class="striped-background">
+
+    <div class="back-button-container"> 
+        <button style="font-size: 1rem; font-family: 'Bueno';"  class="back" onclick="location.href='room.html'">BACK</button>
+    </div>
+
+    <div class="main-header">
+        <marquee direction="right">        
+            <h2>WORKSHOP 2 // WORKSHOP 2 // WORKSHOP 2 // WORKSHOP 2</h2>
+        </marquee>
+    </div>
+
+    <!-- crazy eights -->
+    <div class="container"> 
+      <p>make it bling!</p>
+      <div class="images"> 
+        <img src="images/w2.1.jpg" class="portrait">
+      </div>
+      <p class="info">/* digital workbook visuals */</p>
+      <p class="info">/* crazy eights - quick prototyping and generation of ideas */</p>
+    </div>
+
+    <!-- paper prototyping -->
+    <div class="container"> 
+      <p>paper prototyping</p>
+      <div class="images">
+        <img src="images/w2.2.JPG" class="portrait">
+      </div>
+      <p class="info">/* 3D visualisation of my bedroom */</p>
+      <p class="info">/* idea - certain elements would be clickable, leading to other pages */</p>
+    </div>
+
+    <!-- atomic learning -->
+     <div class="container">
+        <p>atomic learning</p>
+        <div class="images">
+            <img src="images/w1.15.jpg" class="landscape">
+        </div>
+        <p class="info"><a href="https://gunjaaaann.github.io/intmedia-week2/" style="color: #000000;">view here</a></p>
+     </div>
+
+    <!-- development work -->
+     <div class="container">
+        <p>development work</p>
+        <div class="images">
+            <img src="images/w2.3.JPG" class="portrait">
+            <img src="images/w2.4.JPG" class="portrait">
+            <img src="images/w2.5.JPG" class="portrait">
+        </div>
+     </div>
+
+
+    <!-- hunt n gather -->
+    <div class="container">
+        <p>hunt n gather</p>
+        <!-- inspiration 1 -->
+        <div class="images">
+            <img src="images/w2.6.jpg" class="landscape">
+        </div>
+        <p class="info">/* Bruno Simon's portfolio website */</p>
+        <p class="info">/* 3D space, interaction through keyboard */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://bruno-simon.com" style="color: #000000;">view here</a></p>
+
+        <!-- inspiration 2 -->
+        <div class="images">
+            <img src="images/w2.7.jpg" class="landscape">
+        </div>
+        <p class="info">/* Because Recollection */</p>
+        <p class="info">/* a music interactive experience */</p>
+        <p class="info">/* interaction through keyboard */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="http://because-recollection.com/cerrone" style="color: #000000;">view here</a></p>
+        
+        <!-- inspiration 3 -->
+        <div class="images">
+            <img src="images/w2.8.jpg" class="landscape">
+        </div>
+        <p class="info">/* Tim Holman's portfolio website */</p>
+        <p class="info">/* interactive cursor */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://tholman.com" style="color: #000000;">view here</a></p>
+
+        <!-- inspiration 4 -->
+        <div class="images">
+            <img src="images/w2.9.jpg" class="landscape">
+        </div>
+        <p class="info">/* my shrine */</p>
+        <p class="info">/* interactive cursor */</p>
+        <p class="info" style="margin-bottom: 6em;"><a href="https://myshrine.org/VCA_IM/index.html" style="color: #000000;">view here</a></p>
+
+    </div>
+
+    <!-- sources -->
+    <div>
+        <p>sources</p>
+        <p class="info">/* background code copied from lms >> WEEK 2: Guides | Cheatsheets | Code Snippets */</p>
+        <p class="info">/* marquee inspiration. see below */</p>
+        <p class="info"><a href="https://unim-ajl.github.io/Workbook/assignmentOne.html" style="color: #000000;">view here</a></p>
+    </div>
+    
+
+
+    </body>
+</html>
